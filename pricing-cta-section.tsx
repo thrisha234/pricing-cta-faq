@@ -15,6 +15,7 @@ const pricingPlans = [
     features: ["Up to 5 projects", "10GB storage", "Basic support", "Standard templates", "Mobile app access"],
     popular: false,
     cta: "Start Free Trial",
+    color: "bg-indigo-600",
   },
   {
     name: "Professional",
@@ -32,6 +33,7 @@ const pricingPlans = [
     ],
     popular: true,
     cta: "Get Started",
+    color: "bg-emerald-600",
   },
   {
     name: "Enterprise",
@@ -49,6 +51,7 @@ const pricingPlans = [
     ],
     popular: false,
     cta: "Contact Sales",
+    color: "bg-rose-600",
   },
 ]
 
@@ -114,23 +117,23 @@ export default function PricingCTASection() {
 
         <div className="grid gap-6 lg:grid-cols-3 lg:gap-8 mb-20">
           {pricingPlans.map((plan, index) => (
-            <Card key={index} className={`relative ${plan.popular ? "border-primary shadow-lg scale-105" : ""}`}>
+            <Card key={index} className={`relative ${plan.popular ? "ring-2 ring-emerald-400 shadow-xl scale-105" : ""}`}>
               {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary">Most Popular</Badge>
+                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-100 text-emerald-700">Most Popular</Badge>
               )}
               <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                <CardDescription className="text-sm">{plan.description}</CardDescription>
+                <CardTitle className="text-2xl font-bold text-gray-800">{plan.name}</CardTitle>
+                <CardDescription className="text-sm text-gray-600">{plan.description}</CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
+                  <span className="text-4xl font-extrabold text-gray-800">{plan.price}</span>
+                  <span className="text-base font-medium text-gray-500">{plan.period}</span>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-3">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3">
-                      <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center gap-3 text-gray-700">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
@@ -138,8 +141,7 @@ export default function PricingCTASection() {
               </CardContent>
               <CardFooter>
                 <Button
-                  className={`w-full ${plan.popular ? "bg-primary hover:bg-primary/90" : ""}`}
-                  variant={plan.popular ? "default" : "outline"}
+                  className={`w-full text-white ${plan.color} hover:opacity-90 transition`}
                 >
                   {plan.cta}
                 </Button>

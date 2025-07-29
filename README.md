@@ -1,22 +1,45 @@
-# Pricing CTA FAQ
+# 💳 Pricing CTA FAQ
 
-A responsive and user-friendly **Pricing**, **Call-To-Action (CTA)**, and **FAQ** web component built for seamless integration into websites or SaaS platforms.
+A clean, responsive, and customizable **Pricing Page** built using **Next.js**, **React**, and **Tailwind CSS** — complete with Call-To-Action buttons and an expandable FAQ section.
+
+> 🌐 Live Demo: [pricing-cta-faq.vercel.app](https://pricing-cta-faq.vercel.app)
+
+---
 
 ## 🚀 Features
 
-- Clean and modern UI
-- Responsive design
-- Reusable pricing section
-- FAQ with expandable answers
-- Clear call-to-action section
-- Easy to customize
+- 🧩 Three pricing plans: Starter, Professional, and Enterprise
+- 🎯 Distinct CTA button styles per plan
+- 💡 "Most Popular" badge highlight
+- 🔽 Interactive FAQ section with toggle
+- 📱 Fully responsive for mobile/tablet/desktop
+- ⚡ Built with modular and reusable components
 
-## 🛠️ Tech Stack
+---
 
-- HTML5
-- CSS3
-- JavaScript (if applicable)
-- [Any frameworks/libraries you used]
+## 🛠 Tech Stack
 
-## 📂 Folder Structure
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Language**: TypeScript
+- **Icons**: Lucide Icons
+- **Hosting**: Vercel
 
+---
+
+## 📁 Folder Structure
+
+```bash
+.
+├── app/
+│   └── page.tsx                # Renders main Pricing CTA Section
+├── components/
+│   └── ui/                     # Reusable UI components (Card, Button, Badge, etc.)
+├── pricing-cta-section.tsx     # Main layout with pricing plans and FAQs
+├── public/
+├── styles/
+├── tailwind.config.ts
+├── postcss.config.mjs
+├── tsconfig.json
+├── package.json
+└── README.md
